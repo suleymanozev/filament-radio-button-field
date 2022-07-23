@@ -1,0 +1,72 @@
+{
+    "name": "suleymanozev/filament-radio-button-field",
+    "description": "The radio button field for the Filament forms",
+    "keywords": [
+        "suleymanozev",
+        "laravel",
+        "filament-radio-button-field"
+    ],
+    "homepage": "https://github.com/suleymanozev/filament-radio-button-field",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Süleyman ÖZEV",
+            "email": "info@suleymanozev.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "filament/forms": "^2.0",
+        "illuminate/contracts": "^8.6|^9.0",
+        "spatie/laravel-package-tools": "^1.9.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Suleymanozev\\FilamentRadioButtonField\\": "src",
+            "Suleymanozev\\FilamentRadioButtonField\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Suleymanozev\\FilamentRadioButtonField\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suleymanozev\\FilamentRadioButtonField\\FilamentRadioButtonFieldServiceProvider"
+            ],
+            "aliases": {
+                "FilamentRadioButtonField": "Suleymanozev\\FilamentRadioButtonField\\Facades\\FilamentRadioButtonField"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
