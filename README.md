@@ -47,7 +47,7 @@ Please see [CONTRIBUTING](https://github.com/suleymanozev/.github/blob/main/CONT
 
 ## Security Vulnerabilities
 
-Please review [our security policy](https://github.com/suleymanozev/fılament-radio-button-field/security/policy) on how to report security vulnerabilities.
+Please review [our security policy](https://github.com/suleymanozev/filament-radio-button-field/security/policy) on how to report security vulnerabilities.
 
 ## Credits
 
