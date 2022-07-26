@@ -15,6 +15,21 @@ You can install the package via composer:
 composer require suleymanozev/filament-radio-button-field
 ```
 
+Add the package blade files the content section of the _**tailwind.config.js**_ file.
+
+```javascript
+module.exports = {
+    content: [
+        "./resources/**/*.blade.php",
+        "./vendor/suleymanozev/**/*.blade.php", // Add this line
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+}
+```
+
 Optionally, you can publish the views using
 
 ```bash
