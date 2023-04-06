@@ -36,7 +36,7 @@
                 'gap-2' => $isInline(),
             ])>
                 <div class="flex items-center">
-                    <label for="{{ $getId() }}-{{ $value }}" class="w-full cursor-pointer bg-white rounded-lg border grid grid-cols-5 hover:text-gray-600 hover:bg-gray-100">
+                    <label for="{{ $getId() }}-{{ $value }}" class="w-full cursor-pointer bg-white rounded-lg border grid grid-cols-5 hover:text-gray-600 hover:bg-gray-100 shadow-sm overflow-hidden dark:bg-gray-800 dark:hover:bg-gray-700">
                         <input
                             name="{{ $getId() }}"
                             id="{{ $getId() }}-{{ $value }}"
@@ -52,14 +52,14 @@
                         <div  @class([
                             'font-medium flex justify-between items-center p-5 col-span-4 peer-checked:border-blue-600 peer-checked:text-blue-600 peer-checked:bg-blue-100',
                             'text-gray-700' => ! $errors->has($getStatePath()),
-                            'dark:text-gray-200 dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 dark:bg-gray-800 dark:hover:bg-gray-700' => (! $errors->has($getStatePath())) && config('forms.dark_mode'),
+                            'dark:text-gray-200 dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500' => (! $errors->has($getStatePath())) && config('forms.dark_mode'),
                             'text-danger-600' => $errors->has($getStatePath()),
                         ])>
                             <div class="block">
-                                <div class="w-full text-lg font-semibold">
+                                <div class="w-full text-lg font-bold tracking-tight pointer-events-none flex flex-row items-center">
                                     {{ $label }}
                                 </div>
-                                <div class="w-full">
+                                <div class="w-full text-gray-500 text-base">
                                     {{ $getDescription($value) }}
                                 </div>
                             </div>
